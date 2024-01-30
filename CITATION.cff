@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: scorep-metadata2json
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: ' Maximilian'
+    family-names: Sander
+    email: maximilian.sander1@tu-dresden.de
+    affiliation: TUD Dresden University of Technology
+repository-code: 'https://github.com/score-p/scorep_metadata2json'
+abstract: A simple parser to convert Score-P Metadata to JSON
+license: MIT
