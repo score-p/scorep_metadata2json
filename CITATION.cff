@@ -5,7 +5,7 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: ' Maximilian'
+  - given-names: Maximilian
     family-names: Sander
     email: maximilian.sander1@tu-dresden.de
     affiliation: TUD Dresden University of Technology
