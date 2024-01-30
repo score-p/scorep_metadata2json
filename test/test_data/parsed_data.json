@@ -1,0 +1,710 @@
+{
+  "runtime": {
+    "env": {
+      "LOADEDMODULES": null,
+      "SPACK_LOADED_HASHES": null
+    }
+  },
+  "instrumenter": {
+    "executable": {
+      "compiler": "mpif90",
+      "define_flags": [
+        ""
+      ],
+      "compiler_flags": [
+        "-O3",
+        "-fallow-argument-mismatch",
+        "-cpp",
+        "-ffree-line-length-none",
+        "-g"
+      ],
+      "library_files": [
+        ""
+      ],
+      "object_files": [
+        "sp.o",
+        "sp_data.o",
+        "initialize.o",
+        "exact_solution.o",
+        "exact_rhs.o",
+        "set_constants.o",
+        "adi.o",
+        "rhs.o",
+        "zone_setup.o",
+        "x_solve.o",
+        "ninvr.o",
+        "y_solve.o",
+        "pinvr.o",
+        "exch_qbc.o",
+        "z_solve.o",
+        "tzetar.o",
+        "add.o",
+        "txinvr.o",
+        "error.o",
+        "verify.o",
+        "setup_mpi.o",
+        "mpinpb.o",
+        "error_cond.o",
+        "../common/print_results.o",
+        "../common/timers.o"
+      ],
+      "env": {
+        "USER": "max",
+        "LOADEDMODULES": null,
+        "SPACK_LOADED_HASHES": null
+      }
+    },
+    "object": [
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp_data.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/initialize.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_solution.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_rhs.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/set_constants.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/adi.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/rhs.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/zone_setup.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/x_solve.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/ninvr.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/y_solve.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/pinvr.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exch_qbc.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/z_solve.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/tzetar.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/add.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/txinvr.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/verify.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/setup_mpi.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/mpinpb.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error_cond.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/print_results.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      },
+      {
+        "compiler": "mpif90",
+        "source_language": "FORTRAN",
+        "define_flags": [
+          ""
+        ],
+        "compiler_flags": [
+          "-c",
+          "-O3",
+          "-fallow-argument-mismatch",
+          "-cpp",
+          "-ffree-line-length-none",
+          "-g"
+        ],
+        "library_files": [
+          ""
+        ],
+        "source_files": [
+          "/home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/timers.f90"
+        ],
+        "env": {
+          "USER": "max",
+          "LOADEDMODULES": null,
+          "SPACK_LOADED_HASHES": null
+        }
+      }
+    ]
+  }
+}
