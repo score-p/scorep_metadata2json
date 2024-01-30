@@ -17,6 +17,8 @@ Now, you can run scorep_metadata2json directly:
 ```bash
 scorep-metadata2json <path/to/scorep.fair>
 ``` 
+Hint: Use data located in `test/test_data` for testing. 
+
 Yoy can output the schema of the parser by using the `--schema` option:
 ```bash
 scorep-metadata2json --schema
@@ -25,7 +27,7 @@ The schema as well as a visual representation is also available in the documenta
 
 ---
 Alternatively, if you prefer not to activate the virtual environment, you can prefix your commands with `poetry run`:
-```
+```bash
 poetry run scorep-metadata2json -h
 ```
 
