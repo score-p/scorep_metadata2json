@@ -30,6 +30,9 @@ class Instrumenter(BaseModel):
     executable: Optional[LinkedType] = Field(
         None, description="The executable metadata."
     )
+    shared_library: Optional[LinkedType] = Field(
+        None, description="The shared library metadata."
+    )
     object: Optional[List[Object]] = Field(None, description="The object metadata.")
 
 
