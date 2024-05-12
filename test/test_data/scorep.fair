@@ -2,365 +2,313 @@ runtime
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
 instrumenter
-executable ../bin/sp-mz.W.x
-compiler mpif90
-compiler-flags 62
- -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-object-file sp.o
-object-file sp_data.o
-object-file initialize.o
-object-file exact_solution.o
-object-file exact_rhs.o
-object-file set_constants.o
-object-file adi.o
-object-file rhs.o
-object-file zone_setup.o
-object-file x_solve.o
-object-file ninvr.o
-object-file y_solve.o
-object-file pinvr.o
-object-file exch_qbc.o
-object-file z_solve.o
-object-file tzetar.o
-object-file add.o
-object-file txinvr.o
-object-file error.o
-object-file verify.o
-object-file setup_mpi.o
-object-file mpinpb.o
-object-file error_cond.o
-object-file ../common/print_results.o
-object-file ../common/timers.o
-set 3 USER
-max
+executable 16 ../bin/sp-mz.W.x
+compiler 6 mpif90
+compiler-flags 62  -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+object-file 4 sp.o
+object-file 9 sp_data.o
+object-file 12 initialize.o
+object-file 16 exact_solution.o
+object-file 11 exact_rhs.o
+object-file 15 set_constants.o
+object-file 5 adi.o
+object-file 5 rhs.o
+object-file 12 zone_setup.o
+object-file 9 x_solve.o
+object-file 7 ninvr.o
+object-file 9 y_solve.o
+object-file 7 pinvr.o
+object-file 10 exch_qbc.o
+object-file 9 z_solve.o
+object-file 8 tzetar.o
+object-file 5 add.o
+object-file 8 txinvr.o
+object-file 7 error.o
+object-file 8 verify.o
+object-file 11 setup_mpi.o
+object-file 8 mpinpb.o
+object-file 12 error_cond.o
+object-file 25 ../common/print_results.o
+object-file 18 ../common/timers.o
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object sp.o
+object 4 sp.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 54 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object sp_data.o
+object 9 sp_data.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp_data.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 59 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/sp_data.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object initialize.o
+object 12 initialize.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/initialize.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 62 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/initialize.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object exact_solution.o
+object 16 exact_solution.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_solution.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 66 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_solution.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object exact_rhs.o
+object 11 exact_rhs.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_rhs.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 61 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exact_rhs.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object set_constants.o
+object 15 set_constants.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/set_constants.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 65 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/set_constants.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object adi.o
+object 5 adi.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/adi.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 55 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/adi.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object rhs.o
+object 5 rhs.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/rhs.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 55 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/rhs.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object zone_setup.o
+object 12 zone_setup.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/zone_setup.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 62 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/zone_setup.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object x_solve.o
+object 9 x_solve.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/x_solve.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 59 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/x_solve.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object ninvr.o
+object 7 ninvr.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/ninvr.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 57 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/ninvr.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object y_solve.o
+object 9 y_solve.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/y_solve.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 59 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/y_solve.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object pinvr.o
+object 7 pinvr.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/pinvr.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 57 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/pinvr.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object exch_qbc.o
+object 10 exch_qbc.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exch_qbc.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 60 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/exch_qbc.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object z_solve.o
+object 9 z_solve.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/z_solve.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 59 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/z_solve.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object tzetar.o
+object 8 tzetar.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/tzetar.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 58 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/tzetar.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object add.o
+object 5 add.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/add.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 55 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/add.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object txinvr.o
+object 8 txinvr.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/txinvr.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 58 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/txinvr.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object error.o
+object 7 error.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 57 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object verify.o
+object 8 verify.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/verify.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 58 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/verify.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object setup_mpi.o
+object 11 setup_mpi.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/setup_mpi.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 61 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/setup_mpi.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object mpinpb.o
+object 8 mpinpb.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/mpinpb.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 58 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/mpinpb.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object error_cond.o
+object 12 error_cond.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error_cond.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 62 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/SP-MZ/error_cond.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object print_results.o
+object 15 print_results.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/print_results.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 66 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/print_results.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
-object timers.o
+object 8 timers.o
 source-language FORTRAN
-compiler mpif90
-compiler-flags 65
- -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
-define-flags 0
-include-flags 0
-library-files 0
-source-file /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/timers.f90
-set 3 USER
-max
+compiler 6 mpif90
+compiler-flags 65  -c -O3 -fallow-argument-mismatch -cpp -ffree-line-length-none -g
+define-flags 0 
+include-flags 0 
+library-files 0 
+source-file 59 /home/max/tests/NPB3.4.2-MZ/NPB3.4-MZ-MPI/common/timers.f90
+set 3 USER max
 unset LOADEDMODULES
 unset SPACK_LOADED_HASHES
  
