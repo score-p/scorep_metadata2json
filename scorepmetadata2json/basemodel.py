@@ -2,7 +2,7 @@ from typing import List, Optional, Dict
 from pydantic import BaseModel, Field
 
 
-class Executable(BaseModel):
+class LinkedType(BaseModel):
     compiler: str = Field(..., description="The compiler name.")
     define_flags: Optional[List[str]] = Field(None, description="The define flags.")
     compiler_flags: Optional[List[str]] = Field(None, description="The compiler flags.")
@@ -27,7 +27,7 @@ class Object(BaseModel):
 
 
 class Instrumenter(BaseModel):
-    executable: Optional[Executable] = Field(
+    executable: Optional[LinkedType] = Field(
         None, description="The executable metadata."
     )
     object: Optional[List[Object]] = Field(None, description="The object metadata.")

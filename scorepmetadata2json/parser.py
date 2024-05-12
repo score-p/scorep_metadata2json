@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Optional, Dict
 import logging
-from .basemodel import Executable, Object, Instrumenter, Runtime, Metadata
+from .basemodel import LinkedType, Object, Instrumenter, Runtime, Metadata
 
 
 class ParsingContext:
@@ -256,7 +256,7 @@ def parse_metadata(file_content: str) -> Metadata:
 
     objects = []
     runtime = None
-    executable = None
+    linked_type = None
 
     while context.has_more_lines():
         line = context.get_current_line()
@@ -276,7 +276,7 @@ def parse_metadata(file_content: str) -> Metadata:
 
             object_files = parse_keyword(context.copy(), "object-file ")
 
-            executable = Executable(
+            linked_type = LinkedType(
                 compiler=common_attributes.compiler,
                 define_flags=common_attributes.define_flags,
                 compiler_flags=common_attributes.compiler_flags,
