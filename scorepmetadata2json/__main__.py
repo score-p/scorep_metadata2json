@@ -22,7 +22,10 @@ def main() -> None:
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
     metadata = parse_metadata(file_content)
-    print(json.dumps(metadata.model_dump(), indent=2))
+
+    model_dump_json = metadata.model_dump_json()
+
+    print(json.dumps(json.loads(model_dump_json), indent=2))
 
 
 def parse_args() -> argparse.Namespace:

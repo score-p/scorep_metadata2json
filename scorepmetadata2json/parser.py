@@ -90,6 +90,7 @@ class TopLevelSectionNames(str, Enum):
     OBJECT = "object "
     SOURCE = "source "
 
+
 def parse_env_variables(context: ParsingContext) -> Dict[str, Optional[str]]:
     """
     Parses environment variables from the lines of the file.
@@ -234,7 +235,13 @@ def parse_metadata(file_content: str) -> Metadata:
             context.advance()
             logging.debug("Parsing runtime")
             common_attributes = parse_common_attributes(context.copy())
-            runtime = Runtime(env=common_attributes.env)
+            run_id: str = parse_path_like(context.copy(), "run-id",
+                                          with_bytesize=False)[0]  # Get first element (there should be only 1)
+            runtime = Runtime(
+                id=run_id,
+                date=run_id.split("_")[2],
+                env=common_attributes.env
+            )
 
         elif line.startswith(TopLevelSectionNames.EXECUTABLE) or \
                 line.startswith(TopLevelSectionNames.SHARED_LIBRARY):
@@ -248,8 +255,11 @@ def parse_metadata(file_content: str) -> Metadata:
 
             object_files = parse_path_like(context.copy(), "object-file ",
                                            PathLikeParseType.MULTIPLE_LINES_SINGLE_ELEMENT)
-
+            link_id: str = parse_path_like(context.copy(), "compile-id",
+                                              with_bytesize=False)[0]  # Get first element (there should be only 1)
             linked_type = LinkedType(
+                id=link_id,
+                date=link_id.split("_")[2],
                 compiler=common_attributes.compiler,
                 define_flags=common_attributes.define_flags,
                 compiler_flags=common_attributes.compiler_flags,
@@ -267,9 +277,12 @@ def parse_metadata(file_content: str) -> Metadata:
             source_files = parse_path_like(context.copy(), "source-file")
             source_language = parse_path_like(context.copy(), "source-language",
                                               with_bytesize=False)[0]  # Get first element (there should be only 1)
-
+            compile_id: str = parse_path_like(context.copy(), "compile-id",
+                                              with_bytesize=False)[0]  # Get first element (there should be only 1)
             objects.append(
                 Object(
+                    id=compile_id,
+                    date=compile_id.split("_")[2],
                     compiler=common_attributes.compiler,
                     define_flags=common_attributes.define_flags,
                     compiler_flags=common_attributes.compiler_flags,
