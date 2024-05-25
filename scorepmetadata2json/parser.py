@@ -78,6 +78,7 @@ class PathLikeParseType(Enum):
     """
     Enum for the different path-like types that can be parsed.
     """
+    SINGLE_LINE_SINGLE_ELEMENT = auto()
     SINGLE_LINE_MULTIPLE_ELEMENTS = auto()
     MULTIPLE_LINES_SINGLE_ELEMENT = auto()
 
@@ -122,7 +123,7 @@ def parse_env_variables(context: ParsingContext) -> Dict[str, Optional[str]]:
 
 def parse_path_like(context: ParsingContext, keyword: str,
                     kind: PathLikeParseType = PathLikeParseType.SINGLE_LINE_MULTIPLE_ELEMENTS,
-                    with_bytesize: bool = True) -> List[str]:
+                    line_contains_bytesize: bool = True) -> str | List[str]:
     """
     Parses a pathlike string.
 
@@ -140,7 +141,7 @@ def parse_path_like(context: ParsingContext, keyword: str,
         if line.startswith(keyword):
             line_split = line.strip().split(maxsplit=2)
 
-            if with_bytesize:  # Sanity Check for Bytesize
+            if line_contains_bytesize:  # Sanity Check for Bytesize
 
                 if (len(line_split) == 2) and (int(line_split[1]) != 0):
                     raise ValueError(f"Expected 0, got {line_split[1]}")
@@ -149,7 +150,7 @@ def parse_path_like(context: ParsingContext, keyword: str,
                     raise ValueError(f"Expected not '0' , got {line_split[1]}")
 
             if ((len(line_split) == 3)
-                    or (len(line_split) == 2 and with_bytesize is False)):
+                    or (len(line_split) == 2 and line_contains_bytesize is False)):
                 if kind == PathLikeParseType.SINGLE_LINE_MULTIPLE_ELEMENTS:
                     value = line_split[-1].split()
                     return_value = [val.strip() for val in value]
@@ -159,6 +160,12 @@ def parse_path_like(context: ParsingContext, keyword: str,
                 elif kind == PathLikeParseType.MULTIPLE_LINES_SINGLE_ELEMENT:
                     value = line_split[-1]
                     return_value.append(value.strip())
+
+                elif kind == PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT:
+                    value = line_split[-1]
+                    return_value = value.strip()
+                    # We found the keyword, so we can stop searching.
+                    break
 
                 else:
                     raise ValueError(f"Unknown kind: {kind}")
@@ -235,11 +242,16 @@ def parse_metadata(file_content: str) -> Metadata:
             context.advance()
             logging.debug("Parsing runtime")
             common_attributes = parse_common_attributes(context.copy())
-            run_id: str = parse_path_like(context.copy(), "run-id",
-                                          with_bytesize=False)[0]  # Get first element (there should be only 1)
+            run_id: str = parse_path_like(context.copy(), "id",
+                                          PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                          line_contains_bytesize=False)
+            date: str = parse_path_like(context.copy(), "timestamp",
+                                        PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                        line_contains_bytesize=False)
+
             runtime = Runtime(
                 id=run_id,
-                date=run_id.split("_")[2],
+                date=date.split("_")[0], # get only seconds
                 env=common_attributes.env
             )
 
@@ -255,11 +267,16 @@ def parse_metadata(file_content: str) -> Metadata:
 
             object_files = parse_path_like(context.copy(), "object-file ",
                                            PathLikeParseType.MULTIPLE_LINES_SINGLE_ELEMENT)
-            link_id: str = parse_path_like(context.copy(), "compile-id",
-                                              with_bytesize=False)[0]  # Get first element (there should be only 1)
+            link_id: str = parse_path_like(context.copy(), "id",
+                                           PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                           line_contains_bytesize=False)
+            date: str = parse_path_like(context.copy(), "timestamp",
+                                           PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                           line_contains_bytesize=False)
+
             linked_type = LinkedType(
                 id=link_id,
-                date=link_id.split("_")[2],
+                date=date.split("_")[0], # get only seconds
                 compiler=common_attributes.compiler,
                 define_flags=common_attributes.define_flags,
                 compiler_flags=common_attributes.compiler_flags,
@@ -276,13 +293,19 @@ def parse_metadata(file_content: str) -> Metadata:
 
             source_files = parse_path_like(context.copy(), "source-file")
             source_language = parse_path_like(context.copy(), "source-language",
-                                              with_bytesize=False)[0]  # Get first element (there should be only 1)
-            compile_id: str = parse_path_like(context.copy(), "compile-id",
-                                              with_bytesize=False)[0]  # Get first element (there should be only 1)
+                                              PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                              line_contains_bytesize=False)
+            compile_id: str = parse_path_like(context.copy(), "id",
+                                              PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                              line_contains_bytesize=False)
+            date: str = parse_path_like(context.copy(), "timestamp",
+                                        PathLikeParseType.SINGLE_LINE_SINGLE_ELEMENT,
+                                        line_contains_bytesize=False)
+
             objects.append(
                 Object(
                     id=compile_id,
-                    date=compile_id.split("_")[2],
+                    date=date.split("_")[0], # get only seconds
                     compiler=common_attributes.compiler,
                     define_flags=common_attributes.define_flags,
                     compiler_flags=common_attributes.compiler_flags,
