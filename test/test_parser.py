@@ -10,7 +10,7 @@ class TestScorepmetadata2json(unittest.TestCase):
     def setUp(self):
         """Setup test resources."""
         self.test_data_path = os.path.join(os.path.dirname(__file__), "test_data", "scorep.fair")
-        self.reference_data_path = os.path.join(os.path.dirname(__file__), "test_data", "parsed_data.json")
+        self.reference_data_path = os.path.join(os.path.dirname(__file__), "test_data", "scorep.fair.json")
         self.mock_stdout = StringIO()
 
     def tearDown(self):

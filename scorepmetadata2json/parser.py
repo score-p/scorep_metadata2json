@@ -262,6 +262,8 @@ def parse_metadata(file_content: str) -> Metadata:
             type_of_linked_type = TopLevelSectionNames.EXECUTABLE if line.startswith(
                 TopLevelSectionNames.EXECUTABLE) else TopLevelSectionNames.SHARED_LIBRARY
 
+            file_name = line.split()[-1]
+
             context.advance()
             common_attributes = parse_common_attributes(context.copy())
 
@@ -275,6 +277,7 @@ def parse_metadata(file_content: str) -> Metadata:
                                            line_contains_bytesize=False)
 
             linked_type = LinkedType(
+                name=file_name,
                 id=link_id,
                 date=date.split("_")[0], # get only seconds
                 compiler=common_attributes.compiler,
@@ -287,6 +290,9 @@ def parse_metadata(file_content: str) -> Metadata:
 
         elif line.startswith(TopLevelSectionNames.OBJECT):
             logging.debug(f"Parsing object: {line.split()[-1]}")
+
+            file_name = line.split()[-1]
+
             context.advance()
 
             common_attributes = parse_common_attributes(context.copy())
@@ -304,6 +310,7 @@ def parse_metadata(file_content: str) -> Metadata:
 
             objects.append(
                 Object(
+                    name=file_name,
                     id=compile_id,
                     date=date.split("_")[0], # get only seconds
                     compiler=common_attributes.compiler,

@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 
 
 class LinkedType(BaseModel):
+    name: str = Field(..., description="The linked file name.")
     id: str = Field(..., description="The compile id.")
     date: datetime = Field(..., description="The time of linking.")
     compiler: str = Field(..., description="The compiler name.")
@@ -17,6 +18,7 @@ class LinkedType(BaseModel):
 
 
 class Object(BaseModel):
+    name: str = Field(..., description="The object file name.")
     id: str = Field(..., description="The compile id.")
     date: datetime = Field(..., description="The time of compilation.")
     compiler: str = Field(..., description="The compiler name.")
