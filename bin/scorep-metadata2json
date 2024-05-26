@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This file is a wrapper for the actual script (python module)
+# because it has its own 'Poetry' virtual environment and dependencies.
+
+# Resolve the symlink to get the absolute path of the target script
+TARGET_SCRIPT=$(readlink -f "$0")
+
+# Extract the directory part of the target script path
+TARGET_DIR=$(dirname "$TARGET_SCRIPT")
+
+# Change to the directory of the target script
+cd -- "$TARGET_DIR/../" || { echo "Failed to change directory to '$TARGET_DIR/../'";  exit 1; }
+
+poetry run python3 -m scorepmetadata2json "$@"
+
+# Return to the original directory
+cd -- - > /dev/null || { echo "Failed to change directory to the previous directory";  exit 1; }
